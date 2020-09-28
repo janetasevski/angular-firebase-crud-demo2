@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">Add Item</span>
+    <form (ngSubmit)="onSubmit()" #form="ngForm" class="col s6">
+      <div class="row">
+        <div class="input-field col s6">
+          <input [(ngModel)]="item.title" name="title" type="text" required>
+          <label>Title</label>
+        </div>
+        <div class="input-field col s6">
+          <input [(ngModel)]="item.description" name="description" type="text" required>
+          <label>Description</label>
+        </div>
+        <input [disabled]="form.invalid" type="submit" value="Submit" class="btn">
+      </div>
+    </form>
+  </div>
+</div>
